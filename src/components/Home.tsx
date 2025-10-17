@@ -1,5 +1,5 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
-import heroImage from "../assets/img/hero.svg";
+import heroImage from "../assets/img/hero.svg.png";
 
 export function Home() {
   const { ref, isVisible } = useScrollReveal()
@@ -61,7 +61,12 @@ export function Home() {
         <img
           src={heroImage}
           alt="Ilustración principal"
-          style={{ width: '100%', maxWidth: '480px', height: 'auto' }}
+          style={{
+            width: '360px',
+            height: '360px',
+            borderRadius: '50%',
+            objectFit: 'cover',
+          }}
           className="parallax-img"
         />
       </div>
