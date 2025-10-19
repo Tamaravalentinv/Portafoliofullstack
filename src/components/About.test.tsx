@@ -1,10 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import About from './About'; // <- ARREGLO: Se quitaron las llaves { }
+import { render, screen } from '@testing-library/react'
+import { About } from './About'
 
 describe('About', () => {
-  it('muestra el título Sobre mí', () => {
+  it('muestra el título Un poco de mí', () => {
     render(<About />);
-    // La prueba busca un encabezado (h1, h2, etc.) que contenga "sobre mí"
-    expect(screen.getByRole('heading', { name: /sobre mí/i })).toBeTruthy();
+    expect(screen.getByRole('heading', { name: /un poco de mí/i })).toBeTruthy();
   });
 });

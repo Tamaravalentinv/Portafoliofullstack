@@ -1,12 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import Projects from '../Projects'; // CORRECCIÓN: Ruta y tipo de importación
+import { render, screen } from '@testing-library/react'
+import { Projects } from './Projects'
 
 describe('Projects', () => {
   it('lista proyectos de ejemplo', () => {
     render(<Projects />);
-    expect(screen.getByRole('heading', { name: /proyectos/i })).toBeTruthy();
-    // Comprueba que al menos el primer proyecto aparece
-    expect(screen.getByText(/portafolio web/i)).toBeTruthy();
+    expect(screen.getByRole('heading', { name: /soluciones desarrolladas/i })).toBeTruthy();
+    expect(screen.getByText(/portafolio web\.?/i)).toBeTruthy();
   });
 
   it('muestra tecnologías usadas', () => {
