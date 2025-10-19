@@ -15,7 +15,6 @@ Este proyecto es un portafolio simple y funcional con cuatro secciones: Inicio, 
 
 - `npm run dev` — Levanta el servidor de desarrollo de Vite.  
 - `npm run build` — Compila el proyecto para producción en `dist/`.  
-- `npm run preview` — Sirve el build de producción localmente.  
 - `npm run test` — Ejecuta las pruebas unitarias en modo single-run (ChromeHeadless).  
 
 ---
@@ -28,12 +27,6 @@ Este proyecto es un portafolio simple y funcional con cuatro secciones: Inicio, 
 
 ---
 
-## Notas
-
-- Las pruebas usan Testing Library para verificar el renderizado y las interacciones básicas.  
-- Para personalizar los proyectos listados, edita `src/components/Projects.tsx`.  
-
----
 
 ## Guía de Inicio Rápido 🚀
 1. Clona el repositorio:
