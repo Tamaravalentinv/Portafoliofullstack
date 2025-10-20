@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { FaGithub } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'  
+import { MdEmail } from 'react-icons/md'
 
 export function Contact() {
   const [name, setName] = useState('')
@@ -12,6 +12,15 @@ export function Contact() {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+
+    // Validar que el email tenga un solo '@' y termine en .com o .cl
+    const emailPattern = /^[^\s@]+@[^\s@]+\.(com|cl)$/i
+
+    if (!emailPattern.test(email)) {
+      alert('Por favor, ingresa un correo válido que contenga un solo "@" y termine en ".com" o ".cl"')
+      return
+    }
+
     setSent(true)
   }
 
@@ -51,8 +60,7 @@ export function Contact() {
           ) : (
             <>
               <p style={{ maxWidth: '500px' }}>
-                ¿Tienes alguna idea en mente o simplemente quieres crear algo genial juntos? ¡Hablemos!
-                Rellena este formulario y me pondré en contacto contigo.
+                ¿Tienes alguna idea en mente o simplemente quieres crear algo genial juntos? ¡Hablemos! Rellena este formulario y me pondré en contacto contigo.
               </p>
               <form onSubmit={onSubmit} className="contact-form" style={{ maxWidth: '500px', width: '100%' }}>
                 <label>
